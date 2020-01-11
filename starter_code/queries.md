@@ -36,11 +36,11 @@ db.companies.find({$and: [{number_of_employees:{$gt: 100}}, {number_of_employees
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-db.companies.find({ $and: [{ "ipo.valuation_amount" :{ $gt: NumberLong("100000000")}}, {founded_year:{$lt: 2010}}]}, {name: 1, ipo: 1, _id: 0})
+db.companies.find({ $and: [{"ipo.valuation_amount": { $gt: NumberLong("100000000")}}, {founded_year: { $lt: 2010}}]}, {name: 1,ipo: 1, _id: 0}).sort({"ipo.valuation_amount": 1})
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+db.companies.find({number_of_employees})
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
