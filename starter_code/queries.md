@@ -52,6 +52,8 @@ db.companies.find({number_of_employees})
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
+
+db.companies.find({number_of_employees})
 db.companies.find({number_of_employees})
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
